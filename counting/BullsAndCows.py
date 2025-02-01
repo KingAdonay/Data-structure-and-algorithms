@@ -26,9 +26,9 @@ solution = Solution()
 # Testcase 1: secret = "1807" guess = "7810"
 hint = solution.getHint("1807", "7810")
 print("1A3B" == hint)
-# Testcase 1: secret = "1123" guess = "0111"
+# Testcase 2: secret = "1123" guess = "0111"
 hint = solution.getHint("1123", "0111")
 print("1A1B" == hint)
-# Testcase 1: secret = "1122" guess = "1222"
+# Testcase 3: secret = "1122" guess = "1222"
 hint = solution.getHint("1122", "1222")
 print("3A0B" == hint)
