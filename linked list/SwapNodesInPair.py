@@ -26,6 +26,12 @@ class Solution:
             curr = next_node
         
         return dummy_node.next
+    def swapPairsRecursively(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if not head or not head.next: return head 
+        newhead = head.next 
+        head.next = self.swapPairsRecursively(newhead.next)
+        newhead.next = head
+        return newhead
     
 # Tests
 # Testcase 1: [1,2,3,4], expected = [2,1,4,3]
