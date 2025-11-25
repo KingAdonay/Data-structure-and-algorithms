@@ -8,7 +8,7 @@ Use a trie to store the string s. For each word in words, check if it is a subse
 Time complexity: O(N + M * L), where N is the length of string s, M is the number of words, and L is the average length of the words.
 Space complexity: O(N) for the trie.
 
-Fails on large inputs due to inefficiency. (41/43 test cases passed).
+Fails on large inputs due to inefficiency. (41/53 test cases passed).
 '''
 
 class TrieItem:
