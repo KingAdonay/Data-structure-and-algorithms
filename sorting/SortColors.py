@@ -6,12 +6,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        for i in range(len(nums)):
-            for j in range(0, len(nums) - 1 - i):
-                if nums[j] > nums[j + 1]:
-                    temp = nums[j]
-                    nums[j] = nums[j + 1]
-                    nums[j+1] = temp
+        count = [0,0,0]
+        for num in nums:
+            count[num] += 1
+        cur = 0
+        for i in range(3):
+            while count[i]:
+                nums[cur] = i
+                cur += 1
+                count[i] -= 1
     def checkValues(self, actualValue, expectedValue):
         for i, value in enumerate(actualValue):
             if (expectedValue[i] != value):
