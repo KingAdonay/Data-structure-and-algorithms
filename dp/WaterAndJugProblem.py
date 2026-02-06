@@ -4,6 +4,8 @@ from functools import cache
     
     DP to try all possibilities with a maximum increment of the sum the capacity of the of jugs plus the target value.
     
+    Time complexity: O(x*y*target) where x and y are the capacities of the jugs
+    Space complexity: O(x*y*target) for the cache
     
 '''
 class Solution:
