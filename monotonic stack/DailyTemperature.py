@@ -1,5 +1,23 @@
 from typing import List
 
+'''
+    739. Daily Temperatures
+    Intuition:
+    We can use a monotonically decreasing stack to keep track of the temperatures and their indices. 
+    For each temperature, we will pop from the stack until we find a temperature that is greater than the current temperature. 
+    The difference between the current index and the index of the temperature at the top of the stack will give us the number of days until a warmer temperature.
+
+    Approach:
+    1. Initialize an empty stack and an answer list with 0s.
+    2. Iterate through the temperatures from right to left.
+    3. For each temperature, pop from the stack until we find a temperature that is greater than the current temperature.
+    4. If the stack is not empty, calculate the number of days until a warmer temperature and update the answer list.
+    5. Push the current temperature and its index onto the stack.
+    6. Return the answer list.
+
+    Time complexity: O(n) where n is the number of temperatures
+    Space complexity: O(n) for the stack and answer list
+'''
 
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
