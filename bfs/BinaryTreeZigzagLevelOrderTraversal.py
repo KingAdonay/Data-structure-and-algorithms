@@ -22,28 +22,23 @@ class Solution:
             return []
         
         zigzag = []
-        q = deque([root])
-        direction = 1 # 1 - left to right, -1 - right to left
+        q =deque([root])
 
         while q:
-            stack, ans = [], []
+            ans = []
             q_len = len(q)
             for _ in range(q_len):
                 cur = q.popleft()
-                if direction == 1:
-                    ans.append(cur.val)
-                else:
-                    stack.append(cur.val)
+                ans.append(cur.val)
                 if cur.left:
                     q.append(cur.left)
                 if cur.right:
                     q.append(cur.right)
             
-            direction *= -1
-            while stack:
-                ans.append(stack.pop())
-            
-            zigzag.append(ans)
+            if len(zigzag) % 2 == 0:
+                zigzag.append(ans)
+            else:
+                zigzag.append(ans[::-1])
         
         return zigzag
 
