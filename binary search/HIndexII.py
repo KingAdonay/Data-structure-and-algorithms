@@ -10,6 +10,9 @@ from typing import List
     - If citations[mid] > n - mid, it means there are more than enough papers with at least citations[mid] citations, so we can search in the left half to find a potentially larger h.
     - If citations[mid] == n - mid, it means we have found the exact h-index, so we can return it immediately.
     
+    - If exact h-index is not found, the largest h will be the number of papers that have at least h citations, which is n - left after the loop ends,
+    since left will be at the position where citations[left] is just greater than the last h found.
+    
     Time Complexity: O(log(n)) since we perform binary search on the sorted citations array
     Space Complexity: O(1) since we only use a constant amount of extra space
 '''
