@@ -1,5 +1,5 @@
 '''
-    1517. Minimum Non-Zero Product of an Array Elements
+    1969. Minimum Non-Zero Product of an Array Elements
     
     We can use the properties of powers of 2 to find the minimum non-zero product of an array of elements from 1 to 2^p - 1.
     The maximum element in the array is 2^p - 1, and the second largest element is 2^p - 2. The minimum non-zero product can 
